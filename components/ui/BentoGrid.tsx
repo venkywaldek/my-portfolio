@@ -1,7 +1,7 @@
 'use client';
 import { cn } from '@/utils/cn';
 import { BackgroundGradientAnimation } from './GradientBg';
-import { GlobeDemo } from './GridGlobe';
+import  GridGlobe from './GridGlobe';
 import { div, span } from 'framer-motion/client';
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
@@ -102,14 +102,14 @@ export const BentoGridItem = ({
             'group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40  flex flex-col px-5 p-5 lg:p-10'
           )}
         >
-          <div className='font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10'>
+          <div className='font-sans font-extralight md:max-w-32 md:text-xs lg:text- text-sm  text-[#c1c2d3]  z-10'>
             {description}
           </div>
           <div className='font-sans font-bold text-lg  lg:text-3xl max-w-96 z-10'>
             {title}
           </div>
 
-          {id === 2 && <GlobeDemo />}
+          {id === 2 && <GridGlobe />}
 
           {id === 3 && (
             <div className='flex gap-1 lg:gap-5 w-fit absolut -right-3 lg:-right-2'>

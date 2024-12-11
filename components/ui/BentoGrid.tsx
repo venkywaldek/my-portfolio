@@ -48,7 +48,7 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const [copied, setCopied] = useState(false);
-  const leftLists = ['React.js', 'Next.js', 'TypeScript.js']
+  const leftLists = ['ReactJS', 'NextJS', 'TypeScript']
   const rightLists = ['Angular', 'Azure', 'MongoDB']
   const handleCopy = () => {
     navigator.clipboard.writeText('venkatneoiit@gmail.com');
@@ -68,7 +68,7 @@ export const BentoGridItem = ({
           'linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12, 14, 35, 1) 100%)',
       }}
     >
-      <div className={`${id === 6 && 'flex justify-center'}   h-full `}>
+      <div className={`${id === 6 && 'flex justify-center'}  h-full `}>
         <div className='w-full h-full absolute'>
           {img && (
             <img
@@ -117,7 +117,7 @@ export const BentoGridItem = ({
                 {leftLists.map((item, i) => (
                   <span
                     key={i}
-                    className='lg:py-4 lg:px-3 py-2 px-3text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]'
+                    className='lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]'
                   >
                     {item}
                   </span>
@@ -130,7 +130,7 @@ export const BentoGridItem = ({
                 {rightLists.map((item, i) => (
                   <span
                     key={i}
-                    className='py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132e]'
+                    className='py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]'
                   >
                     {item}
                   </span>
@@ -145,14 +145,14 @@ export const BentoGridItem = ({
                 <Lottie
                   animationData={animationData}
                   loop={copied}
-                  autoPlay={copied}
+                  autoPlay={copied} height={200} width={400}
                 />
               </div>
               <MagicButton
                 title={copied ? 'Email is copied' : 'Copy my email address'}
                 icon={<IoCopyOutline />}
                 position='left'
-                otherClasses='!bg-[#161a31]'
+                otherClasses='!bg-[#161A31]'
                 handleClick={handleCopy}
               />
             </div>
